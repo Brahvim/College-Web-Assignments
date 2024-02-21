@@ -22,7 +22,9 @@ const SERVER = HTTP.createServer((p_request, p_response) => {
             });
         } break;
     }
-}).listen(PORT);
+});
+
+SERVER.listen(PORT);
 
 function writeFailureResponse(p_response) {
     console.log("Sending status code `500`...");
