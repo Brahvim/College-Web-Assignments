@@ -3,7 +3,10 @@ const HTTP = require("http");
 const PORT = 8080;
 
 const SERVER = HTTP.createServer((p_request, p_response) => {
-    switch (p_request.url) {
+    const requestedUrl = p_request.url;
+    console.log("Resource `" + requestedUrl + "` was requested.");
+
+    switch (requestedUrl) {
         default: {
             console.log("Received request for unknown page...");
             writeFailureResponse(p_response);
