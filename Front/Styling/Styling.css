@@ -1,9 +1,37 @@
-#welcome-heading {
-    color: blue;
-    text-align: center;
-    font-family: 'Trebuchet MS';
-}
+/* My order? Elements first, then classes, then individual IDs. */
+/* #region Elements. */
 
 .centered-element {
     text-align: center;
 }
+
+/* #endregion. */
+
+/* #region Classes. */
+
+#welcome-heading {
+    color: blue;
+    text-align: center;
+
+    /* Thanks, VSCode! I now have many more similar-looking generic fonts. */
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+/* #endregion */
+
+/* #region IDs. */
+
+#about-me-list {
+    /* Move bullets inside the list item:. */
+    list-style-position: inside;
+
+    /* Remove default left padding on the list: */
+    padding-left: 0;
+
+    /*  Apparently even strings can be used for bullets! */
+    list-style-type: "- ";
+}
+
+/* #endregion */
+
+/* */
