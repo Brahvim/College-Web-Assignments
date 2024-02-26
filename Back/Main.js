@@ -1,5 +1,4 @@
 const HTTP = require("http");
-const PATHS = require("path");
 const FILE_SYSTEM = require("fs");
 
 const PORT = 8080;
