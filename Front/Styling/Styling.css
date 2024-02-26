@@ -1,13 +1,17 @@
 /* My order? Elements first, then classes, then individual IDs. */
 /* #region Elements. */
 
+/* #endregion. */
+
+/* #region Classes. */
+
 .centered-element {
     text-align: center;
 }
 
-/* #endregion. */
+/* #endregion */
 
-/* #region Classes. */
+/* #region IDs. */
 
 #welcome-heading {
     color: blue;
@@ -16,10 +20,6 @@
     /* Thanks, VSCode! I now have many more similar-looking generic fonts. */
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
-
-/* #endregion */
-
-/* #region IDs. */
 
 #about-me-list {
     /* Move bullets inside the list item:. */
@@ -30,6 +30,10 @@
 
     /*  Apparently even strings can be used for bullets! */
     list-style-type: "- ";
+}
+
+#my-image {
+    
 }
 
 /* #endregion */
