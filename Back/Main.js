@@ -14,19 +14,10 @@ const SERVER = HTTP.createServer((p_request, p_response) => {
         p_request.url = (__dirname + "/../Front/Pages") + p_request.url;
     else if (p_request.url.endsWith(".css"))
         p_request.url = (__dirname + "/../Front/Styling") + p_request.url;
+    else if (p_request.url.endsWith(".js"))
+        p_request.url = (__dirname + "/../Front/JavaScript") + p_request.url;
     else
         p_request.url = (__dirname + "/../Resources") + p_request.url;
-
-    // console.log(__dirname);
-    // console.log(FILE_SYSTEM.existsSync(__dirname));
-    // console.log(__dirname + "../");
-    // console.log(FILE_SYSTEM.existsSync(__dirname + "../"));
-    // console.log(__dirname + "../Resources");
-    // console.log(FILE_SYSTEM.existsSync(__dirname + "../Resources"));
-    // console.log(__dirname + "../Front");
-    // console.log(FILE_SYSTEM.existsSync(__dirname + "../Front"));
-    // console.log(__dirname + "../Front/Pages");
-    // console.log(FILE_SYSTEM.existsSync(__dirname + "../Front/Pages"));
 
     console.log("Resource `" + p_request.url + "` was requested.");
 
