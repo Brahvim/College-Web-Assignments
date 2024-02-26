@@ -3,6 +3,10 @@
 
 <head>
 
+    <!-- Scripts: -->
+    <script src="Home.js" type="text/javascript"></script>
+
+    <!-- General header things!...: -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Styling.css">
     <title>Brahvim's Homepage</title>
@@ -12,16 +16,39 @@
 
 <body>
 
-    <h1 id="welcome-heading">Welcome to Brahvim's homepage!</h1>
+    <!-- Welcome heading: -->
+    <h1 class="centered-element" id="welcome-heading">Welcome to Brahvim's assignment-only 'homepage'!</h1>
+
+    <!-- This `<div>` will ensure everything's centered. Perfectly centered. -->
     <div class="centered-element">
 
+        <!-- Profile-picture :> -->
         <img id="my-image" src="MyImage.jpeg" alt="Brahvim's most used profile picture." width="230">
+
+        <!-- A list of references: -->
         <ul id="about-me-list" style="text-align: center;">
-            <li>A</li>
-            <li>B</li>
+
+            <!-- This one gets updates with a script!: -->
+            <li id="age-decl">I'm... currently some number of years old!</li>
+            <br>
+            <!-- "age-decl" stands for "**age decl**aration", by the way! -->
+
+            <li>I love to write code! :D</li>
+            <br>
+
+            <li>Find me on <a href="https://github.com/Brahvim">GitHub</a>!</li>
+            <br>
+
+            <li>I work on a game engine, go <a href="https://github.com/Brahvim/TheNerdProject">check it out!</a></li>
+            <br>
+
         </ul>
 
     </div>
+
+    <footer>
+        <a href="https://github.com/Brahvim/College-Web-Assignments/tree/1/">Source code for this page!</a>
+    </footer>
 
 </body>
 
