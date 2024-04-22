@@ -10,18 +10,27 @@
     text-align: center;
 }
 
-.programming-languages {
+.programming-languages-text-class {
     /* text-align: center; */
-    animation-name: programming-languages-anim;
-    animation-duration: 2s;
+    animation-name: programming-languages-text-anim;
     animation-timing-function: linear;
+    animation-duration: 2s;
+}
+
+.langs-list-class {
+    /* text-align: center; */
+    animation-timing-function: linear;
+    animation-name: langs-list-anim;
+    animation-duration: 4s;
+
+    text-align: center;
 }
 
 /* #endregion */
 
 /* #region IDs. */
 
-#test-text-id {
+#programming-languages-text-id {
     text-align: center;
     font-size: xx-large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -35,7 +44,8 @@
 
 /* #region Animations. */
 
-@keyframes programming-languages-anim {
+@keyframes programming-languages-text-anim {
+
     from {
         top: 50%;
         font-size: xx-small;
@@ -45,6 +55,23 @@
         top: 0%;
         font-size: xx-large;
     }
+
+}
+
+@keyframes langs-list-anim {
+
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
 }
 
 /* */
