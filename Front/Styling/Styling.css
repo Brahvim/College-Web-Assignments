@@ -19,15 +19,7 @@ body {
     text-align: center;
 }
 
-/* #endregion */
-
-/* #region IDs. */
-
-#welcome-heading {
-    color: blue;
-}
-
-#about-me-list {
+.unordered-list {
     /* Move bullets inside the list item:. */
     list-style-position: inside;
 
@@ -36,6 +28,14 @@ body {
 
     /* Remove default left padding on the list: */
     padding-left: 0;
+}
+
+/* #endregion */
+
+/* #region IDs. */
+
+#welcome-heading {
+    color: blue;
 }
 
 #my-image {

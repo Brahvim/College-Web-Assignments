@@ -19,14 +19,18 @@
     <!-- Welcome heading: -->
     <h1 class="centered-element" id="welcome-heading">Welcome to Brahvim's assignment-only 'homepage'!</h1>
 
+    <hr />
+
     <!-- This `<div>` will ensure everything's centered. Perfectly centered. -->
     <div class="centered-element">
 
         <!-- Profile-picture :> -->
-        <img id="my-image" src="MyImage.jpeg" alt="Brahvim's most used profile picture." width="230">
+        <!-- //NOSONAR --> <img id="my-image" src="MyImage.jpeg" alt="Brahvim's most used profile picture." width="230">
+
+        <h1><i>Facts about me!:</i></h1>
 
         <!-- A list of references: -->
-        <ul id="about-me-list" style="text-align: center;">
+        <ul class="unordered-list" style="text-align: center;">
 
             <!-- This one gets updates with a script!: -->
             <li id="age-decl">I'm... currently some number of years old!</li>
@@ -44,7 +48,24 @@
 
         </ul>
 
+        <h1><i>Other stuff to see around here:</i></h1>
+        <!-- A list of references: -->
+        <ul class="unordered-list" style="text-align: center;">
+
+            <li>LNK 1</li>
+            <br>
+
+            <li>LNK 2</li>
+            <br>
+
+            <li>LNK 3</a></li>
+            <br>
+
+        </ul>
+
     </div>
+
+    <hr />
 
     <footer>
         <a href="https://github.com/Brahvim/College-Web-Assignments/tree/1/">Source code for this page!</a>
