@@ -10,6 +10,13 @@
     text-align: center;
 }
 
+.programming-languages {
+    /* text-align: center; */
+    animation-name: programming-languages-anim;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
 /* #endregion */
 
 /* #region IDs. */
@@ -19,14 +26,27 @@
     font-size: xx-large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
-    /*  Centering. By using a 'fixed'/absolute position, then translating: */
-    top: 50%;
     left: 50%;
-    margin: 0;
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -0%);
 }
 
 /* #endregion */
+
+/* #region Animations. */
+
+@keyframes programming-languages-anim {
+    from {
+        top: 50%;
+        font-size: xx-small;
+    }
+
+    to {
+        top: 0%;
+        font-size: xx-large;
+    }
+}
+
+/* */
 
 /* */
