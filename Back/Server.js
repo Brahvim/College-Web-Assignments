@@ -4,17 +4,6 @@ const FILE_SYSTEM = require("fs");
 const PORT = 8080;
 // (Omitted the `/` for consistency with the `/` already present in requests.)
 
-const SERVER_OPTIONS = (() => {
-    let toRet = {};
-
-    FILE_SYSTEM.readFile(__dirname + "/../Resources/ServerOptions.json", (p_error, p_fileData) => {
-        if (!p_error)
-            toRet = p_fileData;
-    });
-
-    return toRet;
-})();
-
 const SERVER = HTTP.createServer((p_request, p_response) => {
     if (p_request.url === "/")
         p_request.url = "/Home.html";
