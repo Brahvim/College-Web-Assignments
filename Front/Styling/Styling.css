@@ -1,14 +1,17 @@
 /* My order? Elements first, then classes, then individual IDs. ...And then @-rules! */
 /* #region Elements. */
 
+footer {
+    animation: home-anim 4s linear;
+
+    position: absolute;
+    left: 45%;
+    top: 80%;
+}
+
 /* #endregion. */
 
 /* #region Classes. */
-
-.centered-element {
-    text-align: center;
-}
-
 .programming-languages-text-class {
     /* text-align: center; */
     animation-name: programming-languages-text-anim;
@@ -19,12 +22,12 @@
 .langs-list-class {
     animation-timing-function: linear;
     animation-name: langs-list-anim;
-    animation-duration: 5s;
+    animation-duration: 4s;
 
-    /* text-align: center; */
-    position: absolute;
     font-size: xx-large;
-    left: 42.5%;
+    position: absolute;
+    /* text-align: center; */
+    /* left: 42.5%; */
     top: 33.3%;
 }
 
@@ -67,6 +70,22 @@
     }
 
     50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes home-anim {
+
+    0% {
+        opacity: 0;
+    }
+
+    75% {
         opacity: 0;
     }
 
