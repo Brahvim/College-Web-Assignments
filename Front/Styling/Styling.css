@@ -1,30 +1,130 @@
 /* My order? Elements first, then classes, then individual IDs. */
 /* #region Elements. */
 
+div {
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
 /* #endregion. */
 
 /* #region Classes. */
 
+.fade-in {
+    opacity: 0;
+    animation: fade-in-anim;
+    animation-duration: 1.75s;
+    animation-timing-function: ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transition: opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
 .centered-element {
     text-align: center;
+}
+
+.body-text {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    font-size: 35px;
+    position: static;
 }
 
 /* #endregion */
 
 /* #region IDs. */
 
-#test-text-id {
-    text-align: center;
-    font-size: xx-large;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
-    /*  Centering. By using a 'fixed'/absolute position, then translating: */
-    top: 50%;
-    left: 50%;
-    margin: 0;
-    position: absolute;
-    transform: translate(-50%, -50%);
+#welcome-text {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center bottom;
+    font-size: 50px;
+
+    animation: welcome-text-anim;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+
+    position: static;
+}
+
+#college-name-text {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center bottom;
+    font-size: 50px;
+
+    animation: college-name-text-anim;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+
+    position: static;
+}
+
+/* #endregion */
+
+/* #region Animations. */
+
+@keyframes body-text-anim {
+
+    0% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes welcome-text-anim {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes college-name-text-anim {
+
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes fade-in-anim {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
 }
 
 /* #endregion */
