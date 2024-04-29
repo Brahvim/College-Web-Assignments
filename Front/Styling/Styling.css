@@ -32,6 +32,20 @@ footer {
     top: 33.3%;
 }
 
+.lang-features-class {
+    animation-timing-function: linear;
+    animation-name: langs-list-anim;
+    animation-duration: 4s;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: xx-large;
+    position: absolute;
+    /* text-align: center; */
+    /* margin: 0 auto; */
+    /* left: 42.5%; */
+    top: 33.3%;
+}
+
 /* #endregion */
 
 /* #region IDs. */
