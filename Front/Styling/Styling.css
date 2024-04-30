@@ -4,7 +4,6 @@
 div {
     left: 50%;
     margin: 0;
-    position: absolute;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -35,7 +34,6 @@ div {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
     font-size: 35px;
-    position: static;
 }
 
 /* #endregion */
@@ -51,8 +49,6 @@ div {
     animation: welcome-text-anim;
     animation-timing-function: linear;
     animation-duration: 1s;
-
-    position: static;
 }
 
 #college-name-text {
@@ -63,8 +59,6 @@ div {
     animation: college-name-text-anim;
     animation-timing-function: linear;
     animation-duration: 2s;
-
-    position: static;
 }
 
 /* #endregion */

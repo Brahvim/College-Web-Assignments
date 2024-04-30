@@ -1,4 +1,4 @@
-console.log("Hi!");
+// console.log("Hi!");
 
 document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo(0, 0);
@@ -18,14 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
     elementsToAddFadeIn = elementsToAddFadeIn
         .filter(e => e.nodeName === "DIV");
 
-    if (elementsToAddFadeIn.length > 0) {
+    if (elementsToAddFadeIn.length > 0)
         elementsToAddFadeIn.forEach(e => {
             e.classList.add("fade-in");
             console.log(e);
         });
-    }
 
-    console.log("Done!")
+    console.log("Done!");
 
     // document.getElementById("body-text").classList.add("visible");
     // document.getElementById("welcome-text").classList.add("visible");
@@ -38,15 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const isElementInViewport = (e) => {
         const rect = e.getBoundingClientRect();
 
-        // TODO!:
-        return (
-            // rect.top >= 0 && 
-            rect.left >= window.scrollX
-            && rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            // && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-            && rect.top > window.scrollY
-            && rect.bottom > window.scrollY
-        );
+        return rect.left < window.scrollX + window.innerWidth
+            && rect.top < window.scrollY + window.innerHeight;
     };
 
     // Function to add elements to the `visible` class when needed:
