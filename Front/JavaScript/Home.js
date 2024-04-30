@@ -1,5 +1,3 @@
-// console.log("Hi!");
-
 document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo(0, 0);
 
@@ -23,12 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
             e.classList.add("fade-in");
             console.log(e);
         });
-
-    console.log("Done!");
-
-    // document.getElementById("body-text").classList.add("visible");
-    // document.getElementById("welcome-text").classList.add("visible");
-    // document.getElementById("college-name-text").classList.add("visible");
 
     // Get all elements that have our `.fade-in` class:
     const elements = document.querySelectorAll('.fade-in');
