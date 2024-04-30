@@ -8,6 +8,11 @@ div {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+ul {
+    list-style-position: inside;
+}
+
+
 /* #endregion. */
 
 /* #region Classes. */
