@@ -12,7 +12,12 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.prompt-text {
+.inflating-text {
+    /* animation: inflating-text-anim 5s ease; */
+}
+
+.centered-element {
+    text-align: center;
     /*  Centering. By using a 'fixed'/absolute position, then translating: */
     top: 50%;
     left: 50%;
@@ -21,9 +26,6 @@
     transform: translate(-50%, -50%);
 }
 
-.centered-element {
-    text-align: center;
-}
 
 /* #endregion */
 
@@ -40,6 +42,18 @@
 
     100% {
         font-size: xx-large;
+    }
+
+}
+
+@keyframes inflating-text-anim {
+
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(3);
     }
 
 }

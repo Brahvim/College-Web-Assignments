@@ -1,16 +1,17 @@
 const username = "Brahvim";
-const password = "gpk@12345";
-
+const password = "pass@12345#";
 
 document.addEventListener("DOMContentLoaded", () => {
 
     // #region Current scope variables. C++-esque Hungarian-notation style!
-    const s_kPromptText = document.querySelector(".prompt-text");
-    const s_kUinText = document.getElementById("uin-text");
-    const s_kUsernamePrompt = "Username, please!... ._.\n";
-    const s_kPasswordPrompt = "Welcome Brahvim! ^-^\nPassword, pleeease... -_-\n";
-    const s_kLoggedInPrompt = "Logged in! ^-^\n";
-    const s_kEmptyString = "";
+    const s_kPasswordPromptText = "Welcome Brahvim! ^-^\nPassword, pleeease... -_-\n";
+    const s_kUsernamePromptText = "Username, please!... ._.\n";
+    const s_kLoggedInPromptText = "Logged in! ^-^\n";
+    const s_kFailureAlertText = "Failure 😅👍️!...";
+    const s_kEmptyStr = "";
+
+    const s_kPromptElement = document.getElementById("prompt-text");
+    const s_kUinElement = document.getElementById("uin-text");
 
     let s_loggedIn = false;
     let s_uin = "";
@@ -18,11 +19,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // #region Functions...
     function updatePromptText(p_prompt) {
-        s_kPromptText.innerText = s_kEmptyString;
-        s_kPromptText.innerText = p_prompt;
-        s_kPromptText.classList = "prompt-text all-text centered-element";
+        void s_kPromptElement.offsetWidth;
+        s_kPromptElement.innerText = p_prompt;
+        // s_kPromptElement.innerText = s_kEmptyStr;
+        s_kPromptElement.classList = "prompt-text all-text centered-element";
     }
 
+    function showFail() {
+        s_uin = s_kFailureAlertText;
+        s_kUinElement.innerText = s_uin;
+        setTimeout(() => {
+            s_uin = s_kEmptyStr;
+            s_kUinElement.innerText = s_uin;
+        }, 800);
+    }
+
+    function substringSinceLastSpace(p_string) {
+        let id = p_string.lastIndexOf(" ");
+
+        // if (id == -1) {
+        //     for (let i = 0; i < p_string.length; i++)
+        //         if (p_string.charCodeAt(i) >= 97 && p_string.charCodeAt(i) <= 122)
+        //             id = i;
+        //
+        if (id == -1)
+            return "";
+        // }
+
+        return p_string.substring(0, id);
+    }
+
+    // ...Welcome `1:52` AM bad code:
     function keyDownListener(p_event) {
         if (s_loggedIn)
             document.removeEventListener(keyDownListener);
@@ -30,39 +57,47 @@ document.addEventListener("DOMContentLoaded", () => {
         switch (p_event.key) {
             case "Backspace": {
                 if (p_event.ctrlKey)
-                    s_uin = s_kEmptyString;
+                    s_uin = substringSinceLastSpace(s_uin);
                 else
                     s_uin = s_uin.substring(0, s_uin.length - 1);
             } break;
 
             case "Enter": {
-                s_uin = s_kEmptyString;
-                let currentPrompt = s_kPromptText.innerText;
+                s_uin = s_kEmptyStr;
+                let currentPrompt = s_kPromptElement.innerText;
 
                 // This should be flattened of course! ...BUT IT'S `1:28` AM, BRAHVIM!
-                if (s_kPromptText.innerText === s_kUsernamePrompt) {
-                    if (s_kUinText.innerText === username)
-                        currentPrompt = s_kPasswordPrompt;
-                } else if (s_kPromptText.innerText === s_kPasswordPrompt) {
-                    if (s_kUinText.innerText === password) {
-                        currentPrompt = s_kLoggedInPrompt;
+                if (s_kPromptElement.innerText === s_kUsernamePromptText) {
+                    if (s_kUinElement.innerText === username)
+                        currentPrompt = s_kPasswordPromptText;
+                    else
+                        showFail();
+                } else if (s_kPromptElement.innerText === s_kPasswordPromptText) {
+                    if (s_kUinElement.innerText === password) {
+                        s_kPromptElement.classList.add("inflating-text");
+                        currentPrompt = s_kLoggedInPromptText;
                         s_loggedIn = true;
-                    }
+                    } else
+                        showFail();
                 }
 
                 updatePromptText(currentPrompt);
             } break;
 
             default: {
+                if (p_event.key.length !== 1)
+                    return;
+
                 s_uin += p_event.key;
             }
         }
 
-        s_kUinText.innerText = s_uin;
+        s_kUinElement.innerText = s_uin;
     };
     // #endregion
 
-    s_kPromptText.innerText = s_kUsernamePrompt;
+    s_kUinElement.style.top = "60%";
+    s_kPromptElement.innerText = s_kUsernamePromptText;
     document.addEventListener('keydown', keyDownListener);
 
 });
