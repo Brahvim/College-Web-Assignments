@@ -34,6 +34,12 @@ th {
     transform: translate(-50%, -50%);
 }
 
+.fade-in {
+    animation: fade-in-anim;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
 /* #endregion */
 
 /* #region IDs. */
@@ -91,6 +97,18 @@ th {
 
     100% {
         border-radius: 5%;
+        opacity: 1;
+    }
+
+}
+
+@keyframes fade-in-anim {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
         opacity: 1;
     }
 
