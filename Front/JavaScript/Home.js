@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Get all elements that have our `.fade-in` class:
         const makeVisible = (e) => e.classList.add('visible');
         const makeInvisible = (e) => e.classList.remove('visible');
-        const makeVisibleDelayed = (e) => setTimeout(500, makeVisible, e);
+        const makeVisibleDelayed = (e) => setTimeout(makeVisible, 50, e);
         const randomRgb = () => `rgb(${Math.random() * 255} ${Math.random() * 255} ${Math.random() * 255})`;
 
         const allElements
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         for (let e of insideElements) {
             if (!e.classList.contains("visible")) {
-                makeVisible(e);
+                makeVisibleDelayed(e);
                 e.style.cssText =
                     e.style.cssText + (`color: ${randomRgb()}`);
             }
