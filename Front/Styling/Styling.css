@@ -1,6 +1,18 @@
 /* My order? Elements first, then classes, then individual IDs. */
 /* #region Elements. */
 
+td {
+    border: 1.5px solid #dddddd;
+    text-align: center;
+    padding: 4px;
+}
+
+th {
+    background-color: #f2f2f2;
+    border: 1.5px solid #dddddd;
+    text-align: center;
+    padding: 4px;
+}
 
 /* #endregion. */
 
@@ -8,23 +20,50 @@
 
 .centered-element {
     text-align: center;
+
+    /*  Centering. By using a 'fixed'/absolute position, then translating: */
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
 }
 
 /* #endregion */
 
 /* #region IDs. */
 
-#test-text-id {
+#time-table {
+    border-collapse: collapse;
+
     text-align: center;
     font-size: xx-large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
-    /*  Centering. By using a 'fixed'/absolute position, then translating: */
-    top: 50%;
-    left: 50%;
-    margin: 0;
-    position: absolute;
-    transform: translate(-50%, -50%);
+#table-name {
+    animation: table-name-anim;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes table-name-anim {
+
+    0% {
+        transform: translate(0%, 0%) rotate(-45deg) scale(1);
+    }
+
+    25% {
+        transform: translate(-10%, -150%) rotate(0deg) scale(2);
+    }
+
+    50% {
+        transform: translate(25%, -150%) rotate(45deg) scale(0.5);
+    }
+
+    100% {
+        transform: translate(0%, 0%) rotate(0deg);
+    }
+
 }
 
 /* #endregion */
