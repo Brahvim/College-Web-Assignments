@@ -6,6 +6,21 @@
 
 /* #region Classes. */
 
+.all-text {
+    font-size: xx-large;
+    animation: any-text-anim 1s ease;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.prompt-text {
+    /*  Centering. By using a 'fixed'/absolute position, then translating: */
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
 .centered-element {
     text-align: center;
 }
@@ -14,25 +29,10 @@
 
 /* #region IDs. */
 
-#prompt-text {
-    text-align: center;
-    font-size: xx-large;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-    /*  Centering. By using a 'fixed'/absolute position, then translating: */
-    top: 50%;
-    left: 50%;
-    margin: 0;
-    position: absolute;
-    transform: translate(-50%, -50%);
-
-    animation: prompt-text-anim 1s ease;
-}
-
 /* #endregion */
 
 /* #region Animations. */
-@keyframes prompt-text-anim {
+@keyframes any-text-anim {
 
     0% {
         font-size: 0;
