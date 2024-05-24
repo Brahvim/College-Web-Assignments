@@ -6,10 +6,6 @@ td {
     border-radius: 5%;
     text-align: center;
     padding: 4px;
-
-    animation: td-anim;
-    animation-duration: 4s;
-    animation-timing-function: cubic-bezier();
 }
 
 th {
@@ -24,6 +20,15 @@ th {
 
 /* #region Classes. */
 
+.fade-in {
+    animation: fade-in-anim;
+    animation-delay: 1.25s;
+    animation-duration: 1.75s;
+    animation-timing-function: ease-out;
+
+    opacity: 1;
+}
+
 .centered-element {
     text-align: center;
 
@@ -34,23 +39,9 @@ th {
     transform: translate(-50%, -50%);
 }
 
-.fade-in {
-    animation: fade-in-anim;
-    animation-duration: 2s;
-    animation-timing-function: ease-out;
-}
-
 /* #endregion */
 
 /* #region IDs. */
-
-#time-table {
-    border-collapse: collapse;
-
-    text-align: center;
-    font-size: xx-large;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
 
 #table-name {
     animation: table-name-anim;
@@ -58,9 +49,29 @@ th {
     animation-timing-function: ease-out;
 }
 
+#time-table-div {
+    border-collapse: collapse;
+
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 /* #endregion */
 
 /* #region Animations. */
+
+@keyframes fade-in-anim {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
 
 @keyframes table-name-anim {
 
@@ -78,38 +89,6 @@ th {
 
     100% {
         transform: translate(0%, 0%) rotate(0deg);
-    }
-
-}
-
-@keyframes td-anim {
-
-    0% {
-        color: #FFFFFFFF;
-        border-radius: 5%;
-        opacity: 0;
-    }
-
-    50% {
-        border-radius: 25%;
-        opacity: 0;
-    }
-
-    100% {
-        border-radius: 5%;
-        opacity: 1;
-    }
-
-}
-
-@keyframes fade-in-anim {
-
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
     }
 
 }
