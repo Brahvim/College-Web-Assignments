@@ -16,7 +16,7 @@ $(document).ready(() => { // Callback for when stuff is ready!
                 clickCount = 0;
                 const secondClickTime = new Date().getTime();
                 const elapsedTime = secondClickTime - firstClickTime;
-                $("#timer").text("Time between clicks was: `" + elapsedTime + "` ms.");
+                $("#timer").text("Time between clicks was: `" + elapsedTime + "` ms :>");
             } break;
 
         }
