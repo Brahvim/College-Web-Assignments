@@ -15,8 +15,24 @@
 
 <body>
 
-    <div class="centered-element" id="p1">This will fade in -v-</div>
-    <div class="centered-element" id="p2">...into its own existence... -v-</div>
+    <div class="centered-element">
+
+        <form id="sample-form">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="email"><br><br>
+
+            <input type="button" id="submit" value="Submit">
+        </form>
+
+        <p id="blink-element" class="hidden">Submitted!</p>
+    </div>
+
 
 </body>
 

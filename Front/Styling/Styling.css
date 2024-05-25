@@ -35,6 +35,10 @@
     top: 55%;
 }
 
+#blink-element {
+    position: absolute;
+}
+
 /* #endregion */
 
 /* */
