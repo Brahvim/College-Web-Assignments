@@ -1,23 +1,23 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo(0, 0);
 
     // Data-oriented design #FTW!:
-    console.log("Adding these elements to the `fade-in` class!");
+    console.log('Adding these elements to the `fade-in` class!');
 
-    let elementsToAddFadeIn = Array.from(document.querySelectorAll("*"));
+    let elementsToAddFadeIn = Array.from(document.querySelectorAll('*'));
 
     // elementsToAddFadeIn = elementsToAddFadeIn
     //     .filter(e => ![
-    //         // // "body-text",
-    //         // "welcome-text",
-    //         // "college-name-text",
+    //         // // 'body-text',
+    //         // 'welcome-text',
+    //         // 'college-name-text',
     //     ].includes(e.id));
 
     elementsToAddFadeIn = elementsToAddFadeIn
-        .filter(e => e.nodeName === "DIV");
+        .filter(e => e.nodeName === 'DIV');
 
     elementsToAddFadeIn.forEach(e => {
-        e.classList.add("fade-in");
+        e.classList.add('fade-in');
         console.log(e);
     });
 
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // const elements = document.querySelectorAll('.fade-in');
 
     // Function to add elements to the `visible` class when needed:
-    const addToVisibleClass = () => {
+    const visibleClassCheck = () => {
         // Get all elements that have our `.fade-in` class:
         const makeVisible = (e) => e.classList.add('visible');
         const makeInvisible = (e) => e.classList.remove('visible');
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         for (let e of insideElements) {
-            if (!e.classList.contains("visible")) {
+            if (!e.classList.contains('visible')) {
                 makeVisibleDelayed(e);
                 e.style.cssText =
                     e.style.cssText + (`color: ${randomRgb()}`);
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // for (let e of document.querySelectorAll('.fade-in')) {
         //     if (isElementInViewport(e)) {
-        //         if (e.classList.contains("visible"))
+        //         if (e.classList.contains('visible'))
         //             return;
         //
         //      makeVisible(e);
@@ -102,9 +102,9 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // These listeners do it, too...:
-    window.addEventListener('scroll', addToVisibleClass);
-    window.addEventListener('resize', addToVisibleClass);
+    window.addEventListener('scroll', visibleClassCheck);
+    window.addEventListener('resize', visibleClassCheck);
 
     // Calling it once for the elements that *have* already loaded:
-    addToVisibleClass();
+    visibleClassCheck();
 });
