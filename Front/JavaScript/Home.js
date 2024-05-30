@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const originalText = promptText.innerText;
     let uin = ""; // "**U**ser **IN**put" :>
 
-    document.addEventListener('keydown', (e) => {
+    document.addEventListener("keydown", (e) => {
         switch (e.key) {
             case "Backspace": {
                 uin = "";
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 promptText.innerText = originalText;
             } break;
 
-            case ' ': {
+            case " ": {
                 uin += e.key;
                 e.preventDefault();
 
