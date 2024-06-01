@@ -7,6 +7,7 @@
 
 <body>
     <h1>Hello, JSP World!</h1>
+    <p>This is a page!</p>
 </body>
 
 </html>
