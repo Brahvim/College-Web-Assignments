@@ -1,13 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page contentType="text/html; character=utf-8;" language="java" import="java.sql.*" errorPage="" %>
 
-<head>
-    <title>Hello JSP</title>
-</head>
+    <!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
-<body>
-    <h1>Hello, JSP World!</h1>
-    <p>This is a page!</p>
-</body>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Open Source Software</title>
+    </head>
 
-</html>
+    <body>
+        <form id="my-form" name="my-form" method="post" action="backend.jsp">
+
+            <p>Enter what is to be defined.</p>
+
+            <label>
+                <input type="text" name="to-define" id="to-define-input" />
+            </label>
+
+            <label>
+                <input type="submit" name="submit" id="submit-input" />
+            </label>
+
+        </form>
+    </body>
+
+    </html>
