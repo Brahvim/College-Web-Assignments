@@ -5,21 +5,21 @@
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Definitions page!</title>
+        <title>Cookie set-up page!</title>
     </head>
 
     <body>
-        <form id="my-form" name="my-form" method="post" action="backend.jsp">
+        <form  name="my-form" method="post" action="backend.jsp">
 
             <p>What should the cookie's name be?!</p>
-            <input type="text" name="cookie-name" id="to-define-input" />
-            <br></br>
+            <input type="text" name="cookie-name" />
+            <br />
 
             <p>What should the cookie contain?</p>
-            <input type="text" name="cookie-data" id="to-define-input" />
-            <br></br>
+            <input type="text" name="cookie-data" />
+            <br />
 
-            <input type="submit" name="submit" id="submit-input" /> 
+            <input type="submit" name="submit" />
 
         </form>
     </body>

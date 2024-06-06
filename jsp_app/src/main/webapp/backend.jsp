@@ -20,9 +20,13 @@
             final LocalDate expiryDate = currentDate.plusYears(1);
 
             final Cookie cookie = new Cookie(cookieName, cookieData);
-            cookie.setMaxAge(ChronoUnit.SECONDS.between(currentDate, expiryDate));
+            cookie.setMaxAge((int) ChronoUnit.DAYS.between(currentDate, expiryDate));
 
             response.addCookie(cookie);
+            out.println(
+                "<h2 style=\"text-align: center; position: absolute; top:50%; left: 50%;\">" +
+                "Your cookie has been written successfully. </h2>"
+            );
         %>
 
     </body>

@@ -55,7 +55,7 @@
                     <execution>
 
                         <id>copy-war</id>
-                        <phase>install</phase>
+                        <phase>package</phase>
 
                         <goals>
                             <goal>copy-resources</goal>
