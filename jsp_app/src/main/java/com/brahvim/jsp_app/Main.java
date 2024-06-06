@@ -16,7 +16,7 @@ public class Main extends HttpServlet {
     @Override
     protected void doGet(final HttpServletRequest p_request, final HttpServletResponse p_response)
             throws ServletException, IOException {
-        // p_response.setContentType("text/html");
+        p_response.setContentType("text/html");
 
         final StringBuilder content = new StringBuilder();
 
@@ -27,7 +27,8 @@ public class Main extends HttpServlet {
                 for (String line = null; (line = br.readLine()) != null;) {
                     content
                             .append(line)
-                            .append("<br>");
+                    // .append("<br>")
+                    ;
                 }
 
                 p_response.getWriter().write(content.toString());

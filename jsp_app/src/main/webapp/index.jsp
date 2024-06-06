@@ -5,21 +5,16 @@
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Open Source Software</title>
+        <title>Definitions page!</title>
     </head>
 
     <body>
         <form id="my-form" name="my-form" method="post" action="backend.jsp">
 
             <p>Enter what is to be defined.</p>
-
-            <label>
-                <input type="text" name="to-define" id="to-define-input" />
-            </label>
-
-            <label>
-                <input type="submit" name="submit" id="submit-input" />
-            </label>
+            <input type="text" name="to-define" id="to-define-input" />
+            <br></br>
+            <input type="submit" name="submit" id="submit-input" />
 
         </form>
     </body>

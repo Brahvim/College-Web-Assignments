@@ -1,4 +1,5 @@
+# Directories:
+jsp_app/target
+tomcat-10.1.24
+
 # Files:
-.vscode/launch.json
-apache-tomcat-10.1.24/**
-jsp_app/target/
