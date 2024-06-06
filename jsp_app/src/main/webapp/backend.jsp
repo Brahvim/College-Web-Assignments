@@ -26,18 +26,14 @@
 
             out.println(
                 "<h2 style=\"" +
-                """
-                    text-align: center;
-                    font-size: xx-large;
-                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-                    /*  Centering. By using a 'fixed'/absolute position, then translating: */
-                    top: 50%;
-                    left: 50%;
-                    margin: 0;
-                    position: absolute;
-                    transform: translate(-50%, -50%);
-                """ +
+                "text-align: center;" +
+                "font-size: xx-large;" +
+                "font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" +
+                "top: 50%;" +
+                "left: 50%;" +
+                "margin: 0;" +
+                "position: absolute;" +
+                "transform: translate(-50%, -50%);" +
                 "\">" +
                 "Your cookie has been written successfully. </h2>"
             );
