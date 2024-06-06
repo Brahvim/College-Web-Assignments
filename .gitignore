@@ -3,3 +3,4 @@ jsp_app/target
 tomcat-10.1.24
 
 # Files:
+!tomcat-10.1.24/conf/server.xml
