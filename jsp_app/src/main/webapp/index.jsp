@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; character=utf-8;" language="java" import="java.sql.*" errorPage="" %>
+<%@ page contentType="text/html; character=utf-8;" language="java" %>
 
     <!DOCTYPE html>
     <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
@@ -11,10 +11,15 @@
     <body>
         <form id="my-form" name="my-form" method="post" action="backend.jsp">
 
-            <p>Enter what is to be defined.</p>
-            <input type="text" name="to-define" id="to-define-input" />
+            <p>What should the cookie's name be?!</p>
+            <input type="text" name="cookie-name" id="to-define-input" />
             <br></br>
-            <input type="submit" name="submit" id="submit-input" />
+
+            <p>What should the cookie contain?</p>
+            <input type="text" name="cookie-data" id="to-define-input" />
+            <br></br>
+
+            <input type="submit" name="submit" id="submit-input" /> 
 
         </form>
     </body>
