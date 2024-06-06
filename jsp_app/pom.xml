@@ -63,7 +63,7 @@
 
                         <configuration>
 
-                            <outputDirectory>${project.basedir}/../tomcat-10.1.24/webapps</outputDirectory>
+                            <outputDirectory>/home/brahvim/Programs/apache-tomcat-10.1.24/webapps</outputDirectory>
                             <resources>
 
                                 <resource>
@@ -101,7 +101,7 @@
                             <goal>exec</goal>
                         </goals>
                         <configuration>
-                            <executable>${project.basedir}/../tomcat-10.1.24/bin/shutdown.sh</executable>
+                            <executable>/home/brahvim/Programs/apache-tomcat-10.1.24/bin/shutdown.sh</executable>
                         </configuration>
 
                     </execution>
@@ -114,7 +114,7 @@
                             <goal>exec</goal>
                         </goals>
                         <configuration>
-                            <executable>${project.basedir}/../tomcat-10.1.24/bin/startup.sh</executable>
+                            <executable>/home/brahvim/Programs/apache-tomcat-10.1.24/bin/startup.sh</executable>
                         </configuration>
 
                     </execution>
