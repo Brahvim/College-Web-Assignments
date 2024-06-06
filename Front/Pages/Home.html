@@ -13,8 +13,24 @@
 <body>
 
     <div id="test-text-id" class="centered-element">
-        Hello, this is a test page! ":D!~
+        <p id="hover-target">Hover over me ^-^</a>
+            <br />
+        <p id="hover-count">0</p>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let g_hoverCount = 0;
+
+            const g_kTarElt = document.getElementById("hover-target");
+            const g_kCountElt = document.getElementById("hover-count");
+
+            g_kTarElt.addEventListener("mouseover", () => {
+                ++g_hoverCount;
+                g_kCountElt.textContent = g_hoverCount;
+            });
+        });
+    </script>
 
 </body>
 
