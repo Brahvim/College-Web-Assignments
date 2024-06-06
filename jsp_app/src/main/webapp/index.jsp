@@ -5,19 +5,30 @@
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Free file uploads!</title>
+        <title>How many visits!?</title>
     </head>
 
     <body>
-        <script src="/index/index.js"></script>
+        <%
+            Integer personalVisitsCount = (Integer) session.getAttribute("personal-visits-count");
+            session.setAttribute("personal-visits-count",
+                personalVisitsCount == null
+                    ? new Integer(0)
+                    : new Integer(personalVisitsCount.intValue() + 1)
+            );
 
-        <form name="my-form" method="post" action="backend.jsp">
-            <input type="file" name="file" />
-            <br />
+            Integer totalVisitsCount = (Integer) session.getAttribute("total-visits-count");
+            session.setAttribute("total-visits-count",
+                totalVisitsCount == null
+                    ? new Integer(0)
+                    : new Integer(totalVisitsCount.intValue() + 1)
+            );
+        %>
 
-            <input type="submit" value="Upload" />
+        You have personally visited this page `<% personalVisitsCount %>` times.
+        <br />
+        This page has had in total, `<% totalVisitsCount %>` visits!
 
-        </form>
     </body>
 
     </html>
