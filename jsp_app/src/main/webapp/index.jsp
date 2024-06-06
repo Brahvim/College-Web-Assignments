@@ -5,21 +5,17 @@
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Cookie set-up page!</title>
+        <title>Free file uploads!</title>
     </head>
 
     <body>
-        <form  name="my-form" method="post" action="backend.jsp">
+        <script src="/index/index.js"></script>
 
-            <p>What should the cookie's name be?!</p>
-            <input type="text" name="cookie-name" />
+        <form name="my-form" method="post" action="backend.jsp">
+            <input type="file" name="file" />
             <br />
 
-            <p>What should the cookie contain?</p>
-            <input type="text" name="cookie-data" />
-            <br />
-
-            <input type="submit" name="submit" />
+            <input type="submit" value="Upload" />
 
         </form>
     </body>
