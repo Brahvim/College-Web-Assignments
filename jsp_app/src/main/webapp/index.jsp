@@ -10,24 +10,24 @@
 
     <body>
         <%
-            Integer personalVisitsCount = (Integer) session.getAttribute("personal-visits-count");
-            session.setAttribute("personal-visits-count",
-                personalVisitsCount == null
-                    ? new Integer(0)
-                    : new Integer(personalVisitsCount.intValue() + 1)
-            );
-
             Integer totalVisitsCount = (Integer) session.getAttribute("total-visits-count");
-            session.setAttribute("total-visits-count",
-                totalVisitsCount == null
+            Integer personalVisitsCount = (Integer) session.getAttribute("personal-visits-count");
+
+            totalVisitsCount = totalVisitsCount == null
                     ? new Integer(0)
-                    : new Integer(totalVisitsCount.intValue() + 1)
-            );
+                    : new Integer(totalVisitsCount.intValue() + 1);
+
+            personalVisitsCount = personalVisitsCount == null
+                    ? new Integer(0)
+                    : new Integer(personalVisitsCount.intValue() + 1);
+
+            session.setAttribute("total-visits-count", totalVisitsCount);
+            session.setAttribute("personal-visits-count", personalVisitsCount);
         %>
 
-        You have personally visited this page `<% personalVisitsCount %>` times.
+        You have personally visited this page `<%=personalVisitsCount%>` times.
         <br />
-        This page has had in total, `<% totalVisitsCount %>` visits!
+        This page has had in total, `<%=totalVisitsCount%>` visits!
 
     </body>
 
